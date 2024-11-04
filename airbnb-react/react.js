@@ -1,19 +1,8 @@
 import baseStyleRules from '../airbnb/style.js';
-import react from 'eslint-plugin-react';
 
 const dangleRules = baseStyleRules.rules['no-underscore-dangle'];
 
 export default {
-  plugins: { react },
-
-  languageOptions: {
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
-  },
-
   // View link below for react rules documentation
   // https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
   rules: {
