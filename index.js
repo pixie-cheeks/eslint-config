@@ -47,8 +47,29 @@ export default [
     rules: {
       'unicorn/prefer-at': ['error', { checkAllIndexAccess: true }],
       'unicorn/no-array-for-each': 'off',
+      'unicorn/numeric-separators-style': [
+        'error',
+        {
+          number: {
+            minimumDigits: 0,
+          },
+        },
+      ],
       'func-style': 'error',
+      'no-plusplus': 'off',
       'prefer-template': 'error',
+      'no-param-reassign': [
+        'error',
+        {
+          props: false,
+        },
+      ],
+      'no-constant-condition': [
+        'error',
+        {
+          checkLoops: 'allExceptWhileTrue',
+        },
+      ],
       ...styleRules,
     },
   },
