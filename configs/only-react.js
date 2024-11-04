@@ -7,6 +7,7 @@ import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import { defineFlatConfig } from 'eslint-define-config';
 import configPretter from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default defineFlatConfig([
   pluginJsxA11y.flatConfigs.strict,
@@ -21,6 +22,9 @@ export default defineFlatConfig([
     },
 
     languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
