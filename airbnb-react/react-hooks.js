@@ -1,8 +1,4 @@
-import reactHooks from 'eslint-plugin-react-hooks';
-
 export default {
-  plugins: { 'react-hooks': reactHooks },
-
   rules: {
     // Enforce Rules of Hooks
     // https://github.com/facebook/react/blob/c11015ff4f610ac2924d1fc6d569a17657a404fd/packages/eslint-plugin-react-hooks/src/RulesOfHooks.js
