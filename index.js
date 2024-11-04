@@ -10,6 +10,7 @@ import configPretter from 'eslint-config-prettier';
 import stylistic from '@stylistic/eslint-plugin';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
+import pluginJs from '@eslint/js';
 
 const styleRules = {
   '@stylistic/lines-between-class-members': [
@@ -25,6 +26,7 @@ const styleRules = {
 };
 
 export default [
+  pluginJs.configs.recommended,
   bestPractices,
   errors,
   es6,
