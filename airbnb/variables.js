@@ -1,6 +1,6 @@
-const confusingBrowserGlobals = require('confusing-browser-globals');
+import confusingBrowserGlobals from 'confusing-browser-globals';
 
-module.exports = {
+export default {
   rules: {
     // enforce or disallow variable initializations at definition
     'init-declarations': 'off',
@@ -28,11 +28,11 @@ module.exports = {
         message:
           'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
       },
-    ].concat(confusingBrowserGlobals.map((g) => ({
-      name: g,
-      message: `Use window.${g} instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md`,
-    }))),
-
+      ...confusingBrowserGlobals.map((g) => ({
+        name: g,
+        message: `Use window.${g} instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md`,
+      })),
+    ],
     // disallow declaration of variables already declared in the outer scope
     'no-shadow': 'error',
 
@@ -51,9 +51,15 @@ module.exports = {
     'no-undefined': 'off',
 
     // disallow declaration of variables that are not used in the code
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+    'no-unused-vars': [
+      'error',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
+    ],
 
     // disallow use of variables before they are defined
-    'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],
-  }
+    'no-use-before-define': [
+      'error',
+      { functions: true, classes: true, variables: true },
+    ],
+  },
 };

@@ -27,6 +27,12 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parserOptions: {
+        // Don't know what the difference is between these ones and the above
+        // ones. import-x does not work properly without the below two.
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
       globals: globals.node,
     },
     plugins: { '@stylistic': stylistic },
