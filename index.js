@@ -58,7 +58,6 @@ export default [
         },
       ],
       'import-x/prefer-default-export': 'off',
-      'import-x/no-default-export': 'error',
       'import-x/extensions': ['error', 'ignorePackages'],
       'func-style': 'error',
       'no-plusplus': 'off',

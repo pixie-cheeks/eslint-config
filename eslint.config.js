@@ -29,7 +29,7 @@ export default [
       sourceType: 'module',
       parserOptions: {
         // Don't know what the difference is between these ones and the above
-        // ones. import-x does not work properly without the below two.
+        // ones. import-x does not work without the below two.
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
@@ -38,7 +38,6 @@ export default [
     plugins: { '@stylistic': stylistic },
     rules: {
       'unicorn/prefer-at': ['error', { checkAllIndexAccess: true }],
-      'unicorn/no-array-for-each': 'off',
       'func-style': 'error',
       'prefer-template': 'error',
       ...styleRules,

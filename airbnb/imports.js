@@ -96,7 +96,8 @@ export default {
           '**/protractor.conf.js', // protractor config
           '**/protractor.conf.*.js', // protractor config
           '**/karma.conf.js', // karma config
-          '**/.eslintrc.js', // eslint config
+          '**/.eslintrc{,.js,.json,.cjs}', // eslint config
+          '**/eslint.config.{js,mjs,cjs,ts,mts,cts}', // flat eslint config
         ],
         optionalDependencies: false,
       },
