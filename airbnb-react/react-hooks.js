@@ -1,11 +1,12 @@
-module.exports = {
-  plugins: [
-    'react-hooks',
-  ],
+import reactHooks from 'eslint-plugin-react-hooks';
+export default {
+  plugins: { 'react-hooks': reactHooks },
 
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+  languageOptions: {
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
     },
   },
 
