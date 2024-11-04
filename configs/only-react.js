@@ -14,7 +14,6 @@ export default defineFlatConfig([
   pluginReact.configs.flat['jsx-runtime'],
   {
     plugins: {
-      'jsx-a11y': pluginJsxA11y,
       'react-hooks': pluginReactHooks,
       react: pluginReact,
     },
