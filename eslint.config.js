@@ -38,6 +38,7 @@ export default [
     plugins: { '@stylistic': stylistic },
     rules: {
       'unicorn/prefer-at': ['error', { checkAllIndexAccess: true }],
+      'unicorn/no-array-for-each': 'off',
       'func-style': 'error',
       'prefer-template': 'error',
       ...styleRules,
