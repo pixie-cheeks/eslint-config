@@ -4,6 +4,7 @@ import nodePlugin from 'eslint-plugin-n';
 import importPluginX from 'eslint-plugin-import-x';
 import globals from 'globals';
 import stylistic from '@stylistic/eslint-plugin';
+import { defineFlatConfig } from 'eslint-define-config';
 
 const styleRules = {
   '@stylistic/lines-between-class-members': [
@@ -18,7 +19,9 @@ const styleRules = {
   ],
 };
 
-export default [
+/// <reference types="@eslint-types/typescript-eslint" />
+
+export default defineFlatConfig([
   pluginJs.configs.recommended,
   pluginUnicorn.configs['flat/recommended'],
   nodePlugin.configs['flat/recommended-module'],
@@ -43,4 +46,4 @@ export default [
       ...styleRules,
     },
   },
-];
+]);

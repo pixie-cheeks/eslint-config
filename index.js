@@ -12,6 +12,7 @@ import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
 import pluginJs from '@eslint/js';
 import * as regexpPlugin from 'eslint-plugin-regexp';
+import { defineFlatConfig } from 'eslint-define-config';
 
 const styleRules = {
   '@stylistic/lines-between-class-members': [
@@ -26,7 +27,9 @@ const styleRules = {
   ],
 };
 
-export default [
+/// <reference types="@eslint-types/typescript-eslint" />
+
+export default defineFlatConfig([
   pluginJs.configs.recommended,
   bestPractices,
   errors,
@@ -78,4 +81,4 @@ export default [
     },
   },
   configPretter,
-];
+]);
