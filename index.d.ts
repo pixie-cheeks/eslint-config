@@ -1,5 +1,9 @@
 import { Linter } from 'eslint';
 
-declare const config: Linter.Config[];
+type Configs = {
+  base: Linter.Config[];
+};
 
-export default config;
+declare const configs: Configs;
+
+export default configs;
