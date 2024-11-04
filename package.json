@@ -15,6 +15,7 @@
   "license": "ISC",
   "files": [
     "airbnb",
+    "airbnb-react",
     "configs",
     "index.js",
     "index.d.ts"

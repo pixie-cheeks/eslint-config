@@ -1,14 +1,7 @@
 import reactHooks from 'eslint-plugin-react-hooks';
+
 export default {
   plugins: { 'react-hooks': reactHooks },
-
-  languageOptions: {
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
-  },
 
   rules: {
     // Enforce Rules of Hooks

@@ -1,17 +1,4 @@
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import react from 'eslint-plugin-react';
-
 export default {
-  plugins: { 'jsx-a11y': jsxA11y, react },
-
-  languageOptions: {
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
-  },
-
   rules: {
     // ensure emoji are accessible
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md

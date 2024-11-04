@@ -1,7 +1,7 @@
 import baseStyleRules from '../airbnb/style.js';
 import react from 'eslint-plugin-react';
 
-const dangleRules = baseStyleRules['no-underscore-dangle'];
+const dangleRules = baseStyleRules.rules['no-underscore-dangle'];
 
 export default {
   plugins: { react },
