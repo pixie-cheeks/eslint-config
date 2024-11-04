@@ -1,7 +1,7 @@
 {
   "name": "@pixie-cheeks/eslint-config",
   "type": "module",
-  "version": "2.3.1",
+  "version": "2.4.1",
   "description": "Personal Eslint config",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,8 @@
   "license": "ISC",
   "files": [
     "airbnb",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "peerDependencies": {
     "eslint": "^9.14.0"
