@@ -11,6 +11,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
 import pluginJs from '@eslint/js';
+import * as regexpPlugin from 'eslint-plugin-regexp';
 
 const styleRules = {
   '@stylistic/lines-between-class-members': [
@@ -36,6 +37,7 @@ export default [
   variables,
   pluginUnicorn.configs['flat/recommended'],
   pluginNode.configs['flat/recommended-module'],
+  regexpPlugin.configs['flat/recommended'],
   {
     languageOptions: {
       globals: {
