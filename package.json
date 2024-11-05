@@ -1,7 +1,7 @@
 {
   "name": "@pixie-cheeks/eslint-config",
   "type": "module",
-  "version": "6.1.0",
+  "version": "7.0.0",
   "description": "Personal Eslint config",
   "main": "index.js",
   "scripts": {

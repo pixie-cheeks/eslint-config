@@ -11,7 +11,6 @@ import globals from 'globals';
 export default defineFlatConfig([
   pluginJsxA11y.flatConfigs.strict,
   pluginReact.configs.flat.recommended,
-  pluginReact.configs.flat['jsx-runtime'],
   {
     plugins: {
       'react-hooks': pluginReactHooks,
@@ -30,7 +29,15 @@ export default defineFlatConfig([
     },
   },
   react,
+  pluginReact.configs.flat['jsx-runtime'],
   reactA11y,
   reactHooks,
+  {
+    files: ['**/*.jsx'],
+    rules: {
+      'func-style': 'off',
+      'unicorn/filename-case': ['error', { cases: { pascalCase: true } }],
+    },
+  },
   configPretter,
 ]);
