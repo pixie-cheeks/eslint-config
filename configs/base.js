@@ -6,7 +6,6 @@ import strict from '../airbnb/strict.js';
 import style from '../airbnb/style.js';
 import variables from '../airbnb/variables.js';
 import globals from 'globals';
-import configPretter from 'eslint-config-prettier';
 import stylistic from '@stylistic/eslint-plugin';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
@@ -79,5 +78,4 @@ export default defineFlatConfig([
       ...styleRules,
     },
   },
-  configPretter,
 ]);

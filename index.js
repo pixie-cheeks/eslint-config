@@ -1,11 +1,11 @@
 import base from './configs/base.js';
-import onlyReact from './configs/only-react.js';
 import react from './configs/react.js';
+import configPrettier from 'eslint-config-prettier';
 
 const configs = {
   base,
-  onlyReact,
   react,
+  prettier: configPrettier,
 };
 
 export default configs;

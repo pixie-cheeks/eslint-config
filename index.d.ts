@@ -2,8 +2,8 @@ import { Linter } from 'eslint';
 
 type Configs = {
   base: Linter.Config[];
-  onlyReact: Linter.Config[];
   react: Linter.Config[];
+  prettier: Linter.Config;
 };
 
 declare const configs: Configs;
