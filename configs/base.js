@@ -64,7 +64,6 @@ export default defineFlatConfig([
       'import-x/extensions': ['error', 'ignorePackages'],
       'func-style': 'error',
       'no-plusplus': 'off',
-      'prefer-template': 'error',
       'no-param-reassign': [
         'error',
         {
