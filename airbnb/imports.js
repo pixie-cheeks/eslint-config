@@ -1,34 +1,4 @@
-import importPluginX from 'eslint-plugin-import-x';
-
 export default {
-  languageOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    parserOptions: {
-      // Don't know what the difference is between these ones and the above
-      // ones. import-x does not work properly without the below two.
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
-  },
-  plugins: {
-    'import-x': importPluginX,
-  },
-
-  settings: {
-    'import-x/resolver': {
-      node: {
-        extensions: ['.mjs', '.js', '.json'],
-      },
-    },
-    'import-x/extensions': ['.js', '.mjs', '.jsx'],
-    'import-x/core-modules': [],
-    'import-x/ignore': [
-      'node_modules',
-      String.raw`\.(coffee|scss|css|less|hbs|svg|json)$`,
-    ],
-  },
-
   rules: {
     // Static analysis:
 

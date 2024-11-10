@@ -10,6 +10,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
 import pluginJs from '@eslint/js';
+import pluginImportX from 'eslint-plugin-import-x';
 import * as regexpPlugin from 'eslint-plugin-regexp';
 import { defineFlatConfig } from 'eslint-define-config';
 
@@ -30,6 +31,38 @@ const styleRules = {
 
 export default defineFlatConfig([
   pluginJs.configs.recommended,
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        // Don't know what the difference is between these ones and the above
+        // ones. import-x does not work properly without the below two.
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          generators: false,
+          objectLiteralDuplicateProperties: false,
+        },
+      },
+    },
+    settings: {
+      'import-x/resolver': {
+        node: {
+          extensions: ['.js', '.cjs', '.mjs', '.json'],
+        },
+      },
+      'import-x/extensions': ['.js', '.cjs', '.mjs', '.jsx'],
+      'import-x/core-modules': [],
+      'import-x/ignore': [
+        'node_modules',
+        String.raw`\.(coffee|scss|css|less|hbs|svg|json)$`,
+      ],
+    },
+    plugins: {
+      'import-x': pluginImportX,
+    },
+  },
   bestPractices,
   errors,
   es6,
@@ -42,12 +75,24 @@ export default defineFlatConfig([
   regexpPlugin.configs['flat/recommended'],
   {
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        // Don't know what the difference is between these ones and the above
+        // ones. import-x does not work properly without the below two.
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          generators: false,
+          objectLiteralDuplicateProperties: false,
+        },
+      },
       globals: {
         ...globals.node,
         ...globals.es2020,
       },
     },
-    plugins: { '@stylistic': stylistic },
+    plugins: { '@stylistic': stylistic, 'import-x': pluginImportX },
     rules: {
       'unicorn/prefer-at': ['error', { checkAllIndexAccess: true }],
       'unicorn/no-array-for-each': 'off',

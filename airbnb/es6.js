@@ -1,15 +1,4 @@
 export default {
-  languageOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    parserOptions: {
-      ecmaFeatures: {
-        generators: false,
-        objectLiteralDuplicateProperties: false,
-      },
-    },
-  },
-
   rules: {
     // enforces no braces where they can be omitted
     // https://eslint.org/docs/rules/arrow-body-style
