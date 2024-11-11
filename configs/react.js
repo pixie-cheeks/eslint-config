@@ -32,6 +32,19 @@ export default defineFlatConfig([
   reactA11y,
   reactHooks,
   {
+    rules: {
+      'jsx-a11y/label-has-associated-control': [
+        'error',
+        {
+          labelAttributes: ['label'],
+          controlComponents: [],
+          depth: 25,
+          assert: 'either',
+        },
+      ],
+    },
+  },
+  {
     files: ['**/*.jsx'],
     rules: {
       'func-style': 'off',
