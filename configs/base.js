@@ -80,6 +80,7 @@ export default defineFlatConfig([
     rules: {
       'unicorn/prefer-at': ['error', { checkAllIndexAccess: true }],
       'unicorn/no-array-for-each': 'off',
+      'unicorn/prevent-abbreviations': 'off',
       'unicorn/numeric-separators-style': [
         'error',
         {
