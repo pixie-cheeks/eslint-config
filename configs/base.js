@@ -91,6 +91,7 @@ export default defineFlatConfig([
       ],
       'import-x/prefer-default-export': 'off',
       'import-x/extensions': ['error', 'ignorePackages'],
+      'import-x/no-default-export': 'error',
       'func-style': 'error',
       'no-plusplus': 'off',
       'no-param-reassign': [
