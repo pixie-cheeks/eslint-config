@@ -26,7 +26,7 @@ const styleRules = {
 
 export default defineConfig([
   pluginJs.configs.recommended,
-  pluginUnicorn.configs['flat/recommended'],
+  pluginUnicorn.configs.recommended,
   nodePlugin.configs['flat/recommended-module'],
   importXPluginFlatConfig.recommended,
   { settings: { 'import-x/resolver-next': [createNodeResolver()] } },
