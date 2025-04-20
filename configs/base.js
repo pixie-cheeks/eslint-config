@@ -53,7 +53,7 @@ export default defineConfig([
   strict,
   style,
   variables,
-  pluginUnicorn.configs['flat/recommended'],
+  pluginUnicorn.configs.recommended,
   pluginNode.configs['flat/recommended-module'],
   pluginRegexp.configs['flat/recommended'],
   {
