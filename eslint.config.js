@@ -1,10 +1,13 @@
 import pluginJs from '@eslint/js';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import nodePlugin from 'eslint-plugin-n';
-import importPluginX from 'eslint-plugin-import-x';
+import {
+  flatConfigs as importXPluginFlatConfig,
+  createNodeResolver,
+} from 'eslint-plugin-import-x';
 import globals from 'globals';
 import stylistic from '@stylistic/eslint-plugin';
-import { defineFlatConfig } from 'eslint-define-config';
+import { defineConfig } from 'eslint/config';
 
 const styleRules = {
   '@stylistic/lines-between-class-members': [
@@ -21,11 +24,12 @@ const styleRules = {
 
 /// <reference types="@eslint-types/typescript-eslint" />
 
-export default defineFlatConfig([
+export default defineConfig([
   pluginJs.configs.recommended,
   pluginUnicorn.configs['flat/recommended'],
   nodePlugin.configs['flat/recommended-module'],
-  importPluginX.flatConfigs.recommended,
+  importXPluginFlatConfig.recommended,
+  { settings: { 'import-x/resolver-next': [createNodeResolver()] } },
   {
     languageOptions: {
       ecmaVersion: 'latest',

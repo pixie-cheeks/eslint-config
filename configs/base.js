@@ -10,9 +10,12 @@ import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
 import pluginJs from '@eslint/js';
-import pluginImportX from 'eslint-plugin-import-x';
+import {
+  flatConfigs as pluginImportXFlatConfigs,
+  createNodeResolver,
+} from 'eslint-plugin-import-x';
 import * as pluginRegexp from 'eslint-plugin-regexp';
-import { defineFlatConfig } from 'eslint-define-config';
+import { defineConfig } from 'eslint/config';
 
 const styleRules = {
   '@stylistic/lines-between-class-members': [
@@ -29,16 +32,12 @@ const styleRules = {
 
 /// <reference types="@eslint-types/typescript-eslint" />
 
-export default defineFlatConfig([
+export default defineConfig([
   pluginJs.configs.recommended,
-  pluginImportX.flatConfigs.recommended,
+  pluginImportXFlatConfigs.recommended,
   {
     settings: {
-      'import-x/resolver': {
-        node: {
-          extensions: ['.js', '.cjs', '.mjs', '.json'],
-        },
-      },
+      'import-x/resolver-next': [createNodeResolver()],
       'import-x/extensions': ['.js', '.cjs', '.mjs', '.jsx'],
       'import-x/core-modules': [],
       'import-x/ignore': [
