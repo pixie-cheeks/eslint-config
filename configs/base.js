@@ -5,7 +5,6 @@ import imports from '../airbnb/imports.js';
 import strict from '../airbnb/strict.js';
 import style from '../airbnb/style.js';
 import variables from '../airbnb/variables.js';
-import globals from 'globals';
 import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
@@ -69,10 +68,6 @@ export default defineConfig([
           generators: false,
           objectLiteralDuplicateProperties: false,
         },
-      },
-      globals: {
-        ...globals.node,
-        ...globals.es2025,
       },
     },
     plugins: { '@stylistic': pluginStylistic },
