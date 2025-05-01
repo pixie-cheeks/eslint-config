@@ -88,6 +88,7 @@ export default defineConfig([
       'import-x/no-default-export': 'error',
       'func-style': 'error',
       'no-plusplus': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-param-reassign': [
         'error',
         {
