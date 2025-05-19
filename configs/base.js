@@ -89,6 +89,7 @@ export default defineConfig([
       'func-style': 'error',
       'no-plusplus': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'consistent-return': 'off', // Causes conflict with no-useless-undefined
       'no-param-reassign': [
         'error',
         {
