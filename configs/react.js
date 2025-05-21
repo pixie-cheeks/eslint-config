@@ -45,10 +45,21 @@ export default defineConfig([
     },
   },
   {
-    files: ['**/*.jsx'],
+    files: ['**/*.{j,t}sx'],
     rules: {
       'func-style': 'off',
       'unicorn/filename-case': ['error', { cases: { pascalCase: true } }],
+      'react/jsx-filename-extension': [
+        'warn',
+        { extensions: ['.tsx', '.jsx'] },
+      ],
+    },
+  },
+  {
+    files: ['**/*.tsx'],
+    rules: {
+      'react/require-default-props': 'off',
+      'react/prop-types': 'off',
     },
   },
 ]);

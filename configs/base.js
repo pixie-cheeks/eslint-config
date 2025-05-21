@@ -29,8 +29,6 @@ const styleRules = {
   ],
 };
 
-/// <reference types="@eslint-types/typescript-eslint" />
-
 export default defineConfig([
   pluginJs.configs.recommended,
   pluginImportXFlatConfigs.recommended,
