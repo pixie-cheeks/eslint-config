@@ -84,6 +84,7 @@ export default defineConfig([
       'import-x/prefer-default-export': 'off',
       'import-x/extensions': ['error', 'ignorePackages'],
       'import-x/no-default-export': 'error',
+      'n/hashbang': ['warn', { ignoreUnpublished: true }],
       'func-style': 'error',
       'no-plusplus': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
