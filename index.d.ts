@@ -1,12 +1,12 @@
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 import globals from 'globals';
 
 type Globals = typeof globals;
 
 type Configs = {
-  base: Linter.Config[];
-  react: Linter.Config[];
-  prettier: Linter.Config;
+  base: Linter.RulesRecord[];
+  react: Linter.RulesRecord[];
+  prettier: Linter.RulesRecord;
   globals: Globals;
 };
 
