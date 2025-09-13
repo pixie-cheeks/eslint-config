@@ -17,6 +17,7 @@ import * as pluginRegexp from 'eslint-plugin-regexp';
 import { defineConfig } from 'eslint/config';
 
 const styleRules = {
+  'lines-between-class-members': 'off',
   '@stylistic/lines-between-class-members': [
     'error',
     {
@@ -85,7 +86,9 @@ export default defineConfig([
       'import-x/extensions': ['error', 'ignorePackages'],
       'import-x/no-default-export': 'error',
       'n/hashbang': ['warn', { ignoreUnpublished: true }],
+      'n/no-missing-import': ['error', { ignoreTypeImport: true }],
       'func-style': 'error',
+      'func-names': ['error', 'as-needed'],
       'no-plusplus': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'consistent-return': 'off', // Causes conflict with no-useless-undefined
