@@ -1,7 +1,7 @@
 {
   "name": "@pixie-cheeks/eslint-config",
   "type": "module",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "description": "Personal Eslint config",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,9 @@
   ],
   "author": "pixie-cheeks",
   "license": "ISC",
+  "engines": {
+    "node": "^21.2.0 || ^20.11.0 || >=22.16.0"
+  },
   "files": [
     "airbnb",
     "airbnb-react",
@@ -24,22 +27,24 @@
     "eslint": ">=9.15.0"
   },
   "devDependencies": {
-    "eslint": "9.35.0",
+    "eslint": "9.36.0",
     "prettier": "3.6.2"
   },
   "dependencies": {
-    "@eslint/js": "9.35.0",
-    "@stylistic/eslint-plugin": "5.3.1",
+    "@eslint/js": "9.36.0",
+    "@stylistic/eslint-plugin": "5.4.0",
     "confusing-browser-globals": "1.0.11",
     "eslint-config-prettier": "10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "4.16.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-n": "17.21.3",
+    "eslint-plugin-n": "17.23.1",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-regexp": "2.10.0",
     "eslint-plugin-unicorn": "61.0.2",
-    "globals": "16.4.0"
+    "globals": "16.4.0",
+    "typescript-eslint": "^8.44.1"
   },
   "prettier": {
     "singleQuote": true

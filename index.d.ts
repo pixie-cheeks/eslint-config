@@ -4,10 +4,12 @@ import globals from 'globals';
 type Globals = typeof globals;
 
 type Configs = {
-  base: Linter.RulesRecord[];
+  vanilla: Linter.RulesRecord[];
+  typescript: Linter.RulesRecord[];
   react: Linter.RulesRecord[];
   prettier: Linter.RulesRecord;
   globals: Globals;
+  version: string;
 };
 
 declare const configs: Configs;

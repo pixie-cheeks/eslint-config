@@ -9,10 +9,7 @@ import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import pluginNode from 'eslint-plugin-n';
 import pluginJs from '@eslint/js';
-import {
-  flatConfigs as pluginImportXFlatConfigs,
-  createNodeResolver,
-} from 'eslint-plugin-import-x';
+import { importX as pluginImportX } from 'eslint-plugin-import-x';
 import * as pluginRegexp from 'eslint-plugin-regexp';
 import { defineConfig } from 'eslint/config';
 
@@ -32,18 +29,7 @@ const styleRules = {
 
 export default defineConfig([
   pluginJs.configs.recommended,
-  pluginImportXFlatConfigs.recommended,
-  {
-    settings: {
-      'import-x/resolver-next': [createNodeResolver()],
-      'import-x/extensions': ['.js', '.cjs', '.mjs', '.jsx'],
-      'import-x/core-modules': [],
-      'import-x/ignore': [
-        'node_modules',
-        String.raw`\.(coffee|scss|css|less|hbs|svg|json)$`,
-      ],
-    },
-  },
+  pluginImportX.flatConfigs.recommended,
   bestPractices,
   errors,
   es6,
@@ -83,7 +69,7 @@ export default defineConfig([
         },
       ],
       'import-x/prefer-default-export': 'off',
-      'import-x/extensions': ['error', 'ignorePackages'],
+      'import-x/extensions': ['error', 'ignorePackages', { ts: 'never' }],
       'import-x/no-default-export': 'error',
       'n/hashbang': ['warn', { ignoreUnpublished: true }],
       'n/no-missing-import': ['error', { ignoreTypeImport: true }],
